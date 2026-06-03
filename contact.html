@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Vote Pablo '27</title>
+  <meta name="description" content="Tell Pablo about your press freedom issue. He's listening." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-wrap {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--navy);
+      padding: 2.5rem;
+      max-width: 640px;
+    }
+    .form-group { margin-bottom: 1.5rem; }
+    label {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      font-family: var(--serif);
+      font-size: 1rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+    textarea { resize: vertical; min-height: 160px; }
+    .form-note {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+    .btn-submit {
+      background: var(--navy);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover { background: var(--gold); }
+    .success-msg {
+      display: none;
+      background: #eaf4e8;
+      border: 1px solid #a3c9a8;
+      border-left: 4px solid #2e7d32;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: #1b5e20;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="nav-brand" href="index.html">Vote Pablo '27</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+      <li><a href="endorse.html">Sign the Ballot</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Press Freedom</p>
+    <h1>Tell me your issue.</h1>
+    <p class="hero-sub">
+      As I collect signatures and votes, I'm also collecting grievances. What's standing between you and the story?
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="form-wrap">
+      <!--
+        FORMSPREE SETUP:
+        1. Go to https://formspree.io and sign up (free)
+        2. Create a new form → name it "Press Freedom Contact"
+        3. Replace YOUR_FORM_ID below with your form ID (looks like: xabcdefg)
+      -->
+      <form
+        action="https://formspree.io/f/xjgdbanv"
+        method="POST"
+        id="contact-form"
+      >
+        <!-- Hidden fields for email routing -->
+        <input type="hidden" name="_subject" value="Press Freedom Issue — DailyPressGallery.com" />
+        <input type="hidden" name="_replyto" value="{{ email }}" />
+
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="Full name" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@outlet.com" />
+          <p class="form-note">I'll respond personally. Not shared.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="outlet">News Outlet</label>
+          <input type="text" id="outlet" name="outlet" placeholder="Your outlet or freelance" />
+        </div>
+
+        <div class="form-group">
+          <label for="gallery">Gallery Credential (if any)</label>
+          <select id="gallery" name="gallery">
+            <option value="">— Select —</option>
+            <option>Daily Press Gallery</option>
+            <option>Periodical Press Gallery</option>
+            <option>Radio-TV Gallery</option>
+            <option>Press Photographers Gallery</option>
+            <option>Not credentialed / Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="issue">Tell me about your press freedom issue(s).</label>
+          <textarea id="issue" name="issue" required placeholder="Describe the access restriction, incident, or ongoing problem you've encountered. Be as specific as you're comfortable with."></textarea>
+          <p class="form-note">Everything you share is confidential unless you say otherwise.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="permission">Can I follow up with you?</label>
+          <select id="permission" name="follow_up_ok">
+            <option value="yes">Yes — please reach out</option>
+            <option value="listen">Just wanted you to know — no response needed</option>
+            <option value="anonymous">Keep this anonymous, no contact</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn-submit">Send to Pablo</button>
+
+        <div class="success-msg" id="success-msg">
+          Got it — thank you. I'll read this carefully.
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Vote Pablo '27</strong> &mdash; Daily Press Gallery Standing Committee of Correspondents</p>
+    <p style="margin-top:0.5rem;">Paid for by Pablo Manríquez &mdash; <a href="mailto:pmnrqz@gmail.com" style="color:var(--gold-lt);">pmnrqz@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  // Show success message on Formspree redirect (when JS handles submission)
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.reset();
+      document.getElementById('success-msg').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('success-msg').offsetTop - 80, behavior: 'smooth' });
+    } else {
+      alert('Something went wrong. Please email pmnrqz@gmail.com directly.');
+    }
+  });
+</script>
+
+</body>
+</html>

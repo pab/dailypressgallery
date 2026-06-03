@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign the Ballot — Vote Pablo '27</title>
+  <meta name="description" content="Pledge your signature to get Pablo Manríquez on the ballot for the Daily Press Gallery Standing Committee of Correspondents." />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .form-wrap {
+      background: #fff;
+      border: 1px solid var(--rule);
+      border-top: 3px solid var(--gold);
+      padding: 2.5rem;
+      max-width: 640px;
+    }
+    .ballot-info {
+      background: var(--navy);
+      color: #b8c4d8;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 2rem;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+    .ballot-info strong { color: var(--gold-lt); }
+    .form-group { margin-bottom: 1.5rem; }
+    label {
+      display: block;
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      font-weight: bold;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy);
+      margin-bottom: 0.4rem;
+    }
+    input[type="text"],
+    input[type="email"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.65rem 0.9rem;
+      font-family: var(--serif);
+      font-size: 1rem;
+      border: 1px solid var(--rule);
+      background: var(--paper);
+      color: var(--ink);
+      border-radius: 2px;
+      transition: border-color 0.2s;
+    }
+    input:focus, textarea:focus, select:focus {
+      outline: none;
+      border-color: var(--navy);
+    }
+    textarea { resize: vertical; min-height: 100px; }
+    .form-note {
+      font-family: var(--sans);
+      font-size: 0.82rem;
+      color: var(--muted);
+      margin-top: 0.3rem;
+    }
+    .checkbox-group {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+    }
+    .checkbox-group input[type="checkbox"] {
+      margin-top: 0.25rem;
+      width: auto;
+      flex-shrink: 0;
+    }
+    .checkbox-group span {
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      color: var(--ink);
+      line-height: 1.5;
+    }
+    .btn-submit {
+      background: var(--gold);
+      color: #fff;
+      font-family: var(--sans);
+      font-size: 0.9rem;
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 0.85rem 2rem;
+      border: none;
+      border-radius: 2px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn-submit:hover { background: var(--navy); }
+    .success-msg {
+      display: none;
+      background: #eaf4e8;
+      border: 1px solid #a3c9a8;
+      border-left: 4px solid #2e7d32;
+      padding: 1rem 1.5rem;
+      margin-top: 1.5rem;
+      font-family: var(--sans);
+      font-size: 0.95rem;
+      color: #1b5e20;
+    }
+    .count-badge {
+      display: inline-block;
+      background: var(--gold);
+      color: #fff;
+      font-family: var(--sans);
+      font-weight: bold;
+      font-size: 2rem;
+      padding: 0.5rem 1.2rem;
+      border-radius: 2px;
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container">
+    <a class="nav-brand" href="index.html">Vote Pablo '27</a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="platform.html">Platform</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="endorse.html" class="active">Sign the Ballot</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="container">
+    <p class="hero-eyebrow">Ballot Signatures — December 2026</p>
+    <h1>Add your name.</h1>
+    <p class="hero-sub">
+      Getting on the ballot requires 15 signatures from Daily Press Gallery members. I have seventeen — and I'm still collecting. If you're a gallery member, sign below to pledge yours.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+
+    <p class="section-label">Where we stand</p>
+    <div class="count-badge">17+</div>
+    <p style="margin-bottom:2.5rem; color: var(--muted); font-family: var(--sans); font-size:0.95rem;">
+      signatures pledged — 15 required to qualify
+    </p>
+
+    <div class="form-wrap">
+      <div class="ballot-info">
+        <strong>Who can sign?</strong> Active members of the Daily Press Gallery in good standing.
+        Signatures are submitted to the gallery in December 2026. Pledging here does not constitute
+        a formal ballot signature — I'll follow up to coordinate the official process.
+        <strong>Your outlet does not need to be the one running.</strong>
+      </div>
+
+      <!--
+        FORMSPREE SETUP:
+        1. Go to https://formspree.io and sign up (free)
+        2. Create a new form → name it "Ballot Signature Pledge"
+        3. Replace YOUR_FORM_ID below with your form ID (looks like: xabcdefg)
+        Note: Use a DIFFERENT form ID than the contact form so submissions are kept separate.
+      -->
+      <form
+        action="https://formspree.io/f/xykagnrj"
+        method="POST"
+        id="endorse-form"
+      >
+        <input type="hidden" name="_subject" value="Ballot Signature Pledge — Vote Pablo '27" />
+
+        <div class="form-group">
+          <label for="name">Full Name *</label>
+          <input type="text" id="name" name="name" required placeholder="As it would appear on gallery records" />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address *</label>
+          <input type="email" id="email" name="email" required placeholder="you@outlet.com" />
+          <p class="form-note">I'll use this only to coordinate the December signature process.</p>
+        </div>
+
+        <div class="form-group">
+          <label for="outlet">News Outlet *</label>
+          <input type="text" id="outlet" name="outlet" required placeholder="Your credentialed outlet" />
+        </div>
+
+        <div class="form-group">
+          <label for="title">Title / Role</label>
+          <input type="text" id="title" name="title" placeholder="Reporter, Bureau Chief, Correspondent, etc." />
+        </div>
+
+        <div class="form-group">
+          <label for="note">Anything you'd like me to know? (optional)</label>
+          <textarea id="note" name="note" placeholder="A platform priority, a concern, a question — I'm listening."></textarea>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="confirm" name="confirmed" value="yes" required />
+            <span>I am an active Daily Press Gallery member in good standing, and I pledge to sign Pablo Manríquez's ballot in December 2026.</span>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <div class="checkbox-group">
+            <input type="checkbox" id="public" name="public_endorsement" value="yes" />
+            <span>I'm okay with my name appearing publicly as a supporter on this website.</span>
+          </div>
+          <p class="form-note" style="margin-top:0.5rem;">Unchecked = your pledge stays private. Either way, it counts.</p>
+        </div>
+
+        <button type="submit" class="btn-submit">Pledge My Signature</button>
+
+        <div class="success-msg" id="success-msg">
+          Thank you — your pledge is in. I'll be in touch before December.
+        </div>
+      </form>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p><strong>Vote Pablo '27</strong> &mdash; Daily Press Gallery Standing Committee of Correspondents</p>
+    <p style="margin-top:0.5rem;">Paid for by Pablo Manríquez &mdash; <a href="mailto:pmnrqz@gmail.com" style="color:var(--gold-lt);">pmnrqz@gmail.com</a></p>
+  </div>
+</footer>
+
+<script>
+  const form = document.getElementById('endorse-form');
+  form.addEventListener('submit', async function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: data,
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.reset();
+      document.getElementById('success-msg').style.display = 'block';
+      window.scrollTo({ top: document.getElementById('success-msg').offsetTop - 80, behavior: 'smooth' });
+    } else {
+      alert('Something went wrong. Please email pmnrqz@gmail.com directly.');
+    }
+  });
+</script>
+
+</body>
+</html>
